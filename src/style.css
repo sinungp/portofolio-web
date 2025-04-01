@@ -209,6 +209,7 @@ nav a:hover {
     margin-top: 3rem;
     position: relative;
     z-index: 2; /* Memastikan links berada di atas background pattern */
+    flex-wrap: wrap; /* Memungkinkan items untuk wrap pada layar kecil */
 }
 
 .contact-item {
@@ -222,6 +223,8 @@ nav a:hover {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.8);
     cursor: pointer;
+    min-width: 150px; /* Minimal width untuk contact item */
+    justify-content: center; /* Center content */
 }
 
 .contact-item:hover {
@@ -246,6 +249,25 @@ nav a:hover {
 
 .cta-button:hover {
     background: var(--secondary-color);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-content {
+        padding: 0 1rem;
+    }
 }
 
 /* Animations */
