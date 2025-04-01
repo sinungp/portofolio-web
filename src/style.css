@@ -119,27 +119,14 @@ nav a:hover {
 
 /* Skills Section */
 #skills {
-    padding: 5rem 0;
-    background: #f8fafc;
+    padding: 8rem 0 5rem; /* Menambah padding top */
+    background: var(--bg-color); /* Mengubah background menjadi putih */
     position: relative;
     overflow: hidden;
 }
 
 #skills::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(45deg, var(--pattern-color) 25%, transparent 25%) -50px 0,
-        linear-gradient(-45deg, var(--pattern-color) 25%, transparent 25%) -50px 0,
-        linear-gradient(45deg, transparent 75%, var(--pattern-color) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--pattern-color) 75%);
-    background-size: 100px 100px;
-    opacity: 0.3;
-    z-index: 0;
+    display: none; /* Menghilangkan pola background */
 }
 
 #skills .container {
@@ -155,23 +142,33 @@ nav a:hover {
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: white;
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    top: 0;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 16px rgba(37, 99, 235, 0.1);
+    background: linear-gradient(to bottom right, white, #f8fafc);
+}
+
+.skill-card:hover i {
+    transform: scale(1.1);
 }
 
 .skill-card i {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
 .skill-card p {
@@ -210,6 +207,8 @@ nav a:hover {
     justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
+    z-index: 2; /* Memastikan links berada di atas background pattern */
 }
 
 .contact-item {
@@ -218,11 +217,21 @@ nav a:hover {
     gap: 0.5rem;
     text-decoration: none;
     color: var(--text-color);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
 }
 
 .contact-item:hover {
     color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
 }
 
 .cta-button {
@@ -302,4 +311,156 @@ nav a:hover {
     100% {
         transform: translateY(0) rotate(0);
     }
+}
+
+/* About Section */
+#about {
+    padding: 5rem 0;
+    background: var(--bg-color);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Experience Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.timeline-content .date {
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style-type: none;
+}
+
+.timeline-content ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.timeline-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-tech span {
+    background: var(--pattern-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Certifications Section */
+#certifications {
+    padding: 5rem 0 8rem; /* Menambah padding bottom */
+    position: relative;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cert-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
