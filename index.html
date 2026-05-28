@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sinung Prayetno - DevOps Engineer specializing in CI/CD, Kubernetes, Docker, cloud infrastructure, and automation.">
+    <meta name="keywords" content="DevOps Engineer, Kubernetes, Docker, CI/CD, Cloud Infrastructure, Sinung Prayetno, Indonesia">
+    <meta name="author" content="Sinung Prayetno">
+    <meta property="og:title" content="Sinung Prayetno | DevOps Engineer">
+    <meta property="og:description" content="Building and maintaining scalable infrastructure solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinungp.github.io/portofolio-web/">
+    <meta property="og:image" content="https://sinungp.github.io/portofolio-web/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Sinung Prayetno | DevOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script type="module" crossorigin src="/portofolio-web/assets/index-225ba079.js"></script>
-  <link rel="stylesheet" href="/portofolio-web/assets/index-945d1d2c.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+  <script type="module" crossorigin src="/portofolio-web/assets/index-39f81257.js"></script>
+  <link rel="stylesheet" href="/portofolio-web/assets/index-60f5e9fc.css">
 </head>
 <body>
     <nav>
         <div class="container">
-            <div class="logo">My Portofolio</div>
-            <button class="mobile-menu-btn" id="mobile-menu">
+            <div class="logo">&lt;Sinung /&gt;</div>
+            <button class="mobile-menu-btn" id="mobile-menu" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <button id="theme-toggle" class="theme-toggle">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                         <i class="fas fa-moon"></i>
                     </button>
                 </li>
@@ -33,39 +48,90 @@
     <section id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Sinung Prayetno</span></h1>
-                <h2>DevOps Engineer</h2>
-                <p>Building and maintaining scalable infrastructure solutions</p>
-                <a href="#contact" class="cta-button">Get In Touch</a>
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1>Sinung <span class="highlight">Prayetno</span></h1>
+                    <h2>DevOps Engineer</h2>
+                    <p class="hero-desc">Building and maintaining scalable infrastructure solutions</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                        <a href="#projects" class="cta-button cta-secondary">View Projects</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/sinungp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sinung-prayetno-a1b848106/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:sinungprayitno@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <div class="avatar">
+                            <img alt="Sinung Prayetno" class="avatar-img" id="hero-foto">
+                        </div>
+                        <div class="tech-icons">
+                            <i class="fab fa-docker" style="top: 10%; left: -20px; animation-delay: 0s;"></i>
+                            <i class="fab fa-aws" style="top: 40%; right: -25px; animation-delay: 0.5s;"></i>
+                            <i class="fas fa-ship" style="bottom: 20%; left: -15px; animation-delay: 1s;"></i>
+                            <i class="fab fa-linux" style="bottom: 5%; right: -15px; animation-delay: 1.5s;"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I am a passionate DevOps Engineer with extensive experience in automating, optimizing, and maintaining modern infrastructure. My expertise lies in implementing CI/CD pipelines, container orchestration, and cloud infrastructure management.</p>
-                    <p>With a strong foundation in both development and operations, I specialize in bridging the gap between software development and IT operations to deliver efficient, scalable, and reliable solutions.</p>
+                <div class="about-image" data-aos="fade-right">
+                    <div class="about-avatar">
+                        <img alt="Sinung Prayetno" class="about-img" id="about-foto">
+                    </div>
                 </div>
+                <div class="about-text" data-aos="fade-left">
+                    <p>I am a passionate <strong>DevOps Engineer</strong> with extensive experience in automating, optimizing, and maintaining modern infrastructure. My expertise lies in implementing <strong>CI/CD pipelines</strong>, <strong>container orchestration</strong>, and <strong>cloud infrastructure management</strong>.</p>
+                    <p>With a strong foundation in both development and operations, I specialize in bridging the gap between software development and IT operations to deliver efficient, scalable, and reliable solutions.</p>
+                    <p>When I'm not automating infrastructure, you'll find me exploring new cloud technologies, contributing to open-source projects, or sharing knowledge with the DevOps community.</p>
+                    <a href="./resume.pdf" class="cta-button resume-btn" id="download-resume" download><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <span class="stat-number" data-target="7">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="experience">
         <div class="container">
-            <h2>Work Experience</h2>
+            <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>IT Support</h3>
-                        <h4>PT. Wellcomm Ritelindo Pratama</h4>
-                        <p class="date">2018 - 2020</p>
+                        <h3>DevOps Engineer</h3>
+                        <h4>PT. Indodev Niaga Internet</h4>
+                        <p class="date">2023 - Present</p>
                         <ul>
-                            <li>Managed and maintained IT infrastructure for 50+ retail stores across Indonesia</li>
-                            <li>Reduced system downtime by 40% through proactive monitoring and maintenance</li>
-                            <li>Implemented backup and disaster recovery solutions for critical business systems</li>
+                            <li>Implemented and managed Kubernetes clusters for microservices architecture</li>
+                            <li>Reduced deployment time by 70% through CI/CD pipeline optimization</li>
+                            <li>Architected cloud infrastructure on Cloud and Onpremise Infrastructure</li>
                         </ul>
                     </div>
                 </div>
@@ -83,26 +149,28 @@
                 </div>
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>DevOps Engineer</h3>
-                        <h4>PT. Indodev Niaga Internet</h4>
-                        <p class="date">2023 - Present</p>
+                        <h3>IT Support</h3>
+                        <h4>PT. Wellcomm Ritelindo Pratama</h4>
+                        <p class="date">2018 - 2020</p>
                         <ul>
-                            <li>Implemented and managed Kubernetes clusters for microservices architecture</li>
-                            <li>Reduced deployment time by 70% through CI/CD pipeline optimization</li>
-                            <li>Architected cloud infrastructure on Cloud and Onpremise Infrastructure</li>
+                            <li>Managed and maintained IT infrastructure for 50+ retail stores across Indonesia</li>
+                            <li>Reduced system downtime by 40% through proactive monitoring and maintenance</li>
+                            <li>Implemented backup and disaster recovery solutions for critical business systems</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Add more timeline items for previous positions -->
             </div>
         </div>
     </section>
 
     <section id="projects">
         <div class="container">
-            <h2>Key Projects</h2>
+            <h2 class="section-title">Key Projects</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <i class="fas fa-store"></i>
+                    </div>
                     <div class="project-content">
                         <h3>Retail IT System Modernization</h3>
                         <p>Led the modernization of retail IT systems across 50+ stores, implementing centralized monitoring and automated backup solutions</p>
@@ -113,7 +181,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <i class="fas fa-server"></i>
+                    </div>
                     <div class="project-content">
                         <h3>Server Migration & Monitoring</h3>
                         <p>Designed and executed migration of legacy infrastructure migration from physical server to Proxmox VM, implementing comprehensive monitoring using Zabbix</p>
@@ -124,7 +195,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
                     <div class="project-content">
                         <h3>DevOps Pipeline Automation</h3>
                         <p>Built and optimized CI/CD pipelines using Jenkins and Docker, reducing deployment time and improving application reliability</p>
@@ -141,7 +215,7 @@
 
     <section id="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <a href="https://www.docker.com/" class="skill-card" data-aos="fade-up" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-docker"></i>
@@ -224,25 +298,67 @@
 
     <section id="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:sinungprayitno@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email Me</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sinung-prayetno-a1b848106/" class="contact-item" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/sinungp" class="contact-item" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info-column" data-aos="fade-right">
+                    <p class="contact-desc">Have a project in mind or just want to say hi? Feel free to reach out!</p>
+                    <div class="contact-items">
+                        <a href="mailto:sinungprayitno@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">sinungprayitno@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sinung-prayetno-a1b848106/" class="contact-item" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/sinung-prayetno</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/sinungp" class="contact-item" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/sinungp</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+                <form class="contact-form" data-aos="fade-left" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="form-name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="form-email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="form-subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Sinung Prayetno. Built with <i class="fas fa-heart" style="color: #ef4444;"></i></p>
+                <div class="footer-links">
+                    <a href="https://github.com/sinungp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sinung-prayetno-a1b848106/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:sinungprayitno@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     
 </body>
